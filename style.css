@@ -1,0 +1,741 @@
+body {
+
+    background-color: #ffffff;
+  
+}
+
+/* The Overlay (background) */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 2;
+    /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 1);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    z-index: 2;
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+
+.overlay a {
+    z-index: 2;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #ffffff;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #B8A060;
+    text-decoration: underline;
+    transition: 0.3s;
+
+}
+
+/* Position the close button (top right corner) */
+
+.overlay .closebtn {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+
+
+/* Dropdown Button */
+
+.dropbtn {
+
+    color: #818181;
+    padding: 8px;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+
+
+
+}
+
+/* Dropdown button on hover & focus */
+
+.dropbtn:hover,
+.dropbtn:focus {
+    color: #B8A060;
+    
+
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: block;
+
+
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    display: none;
+    position: relative;
+    min-width: 160px;
+    z-index: 1;
+
+
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: #B8A060;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 1;
+  
+
+}
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd
+    
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
+
+
+.logo img{
+    z-index: 1;
+    position: absolute;
+    /*left: 75px;
+    top: 75px;*/
+    left: 1.5%;
+    top: 2%;
+    height: 146px;
+    width: 117px;
+}
+
+.sectionwrapper {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+}
+
+
+.design,
+h1 {
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: 12vw;
+    text-align: center;
+    margin: 0;
+    /*padding-left: 10px;*/
+
+
+}
+
+
+
+.sectionwrapper2 {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 10%;
+
+}
+
+h3 {
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    color: #B8A060;
+    font-size: 5vw;
+    margin: 0px;
+    margin-top: 12px;
+    /*padding-left: 70px;
+    padding-top: 10px;*/
+
+}
+
+.koch {
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 8vw;
+    
+    /*margin: 0px;*/
+    padding-left: 15px;
+
+}
+
+
+.hr {
+    z-index: 1;
+    border-color: #cccccc;
+    margin-bottom: 10px;
+    margin-top: 110px;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 1px;
+     
+}
+
+.x-files a {
+    text-align: center; 
+    
+    font-family: 'Roboto', sans-serif;
+    color: #B8A060;
+    font-size: 1.5vw;  
+    margin-top: 35px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    transition: 0.5s ease-in-out;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+       
+    
+}
+
+
+.x-files a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 100;
+    /*border-style: solid;*/
+      
+    background-color: rgb(221, 221, 221);
+    background-color: rgba(221, 221, 221, 0.4 );
+    cursor: pointer;
+    border-radius: 0%;
+    text-decoration-color: #B8A060;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+  
+    
+
+}
+
+/*.intro {
+    
+    bottom: 100px;
+}*/
+
+.portfolio {
+    
+    text-align: center;    
+    font-family: 'Playfair Display', serif;
+    color: #B8A060;
+    font-size: 5em;
+    margin: 0px;
+    margin-top: 10%;
+    font-weight: 600;
+    /*padding-top: 30px;
+    text-align: center;
+    
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 10px;*/
+
+}
+
+
+
+.semester {
+    text-align: center;  
+    z-index: 3;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 6em;
+    margin: 0px;
+    text-transform: uppercase;
+    
+   
+    
+}
+
+
+
+.video-container {
+    z-index: -100;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#video-bg {
+    width: 100%;
+
+}
+
+.menudiv {
+   
+    position: fixed;
+    right: 2%;
+    top: 2%;  
+    cursor: pointer;
+}
+
+.div {
+   
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+   /* position: fixed;
+    right: 2%;
+    top: 5%; */   
+   
+}
+
+.div1 {
+   
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+   /* position: fixed;
+    right: 2%;
+    top: 3.5%; */   
+   
+}
+
+.div2 {
+   
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+  /*  position: fixed;
+    right: 2%;
+    top: 2%;    
+   */
+}
+
+
+
+
+
+.footer { 
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 1em;    
+    position: absolute;
+    right: 0;
+    bottom: 10;
+    left: 0;
+    
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .design,
+h1 {
+   
+    font-size: 16vw;
+    margin-top: 10px;
+
+}
+    
+   .sectionwrapper2 {
+
+    margin-left: 15%;
+    margin-top: 0px;
+
+}
+    
+    h3 {
+   
+  
+    font-size: 8vw;
+    margin: 0px;
+    margin-top: 4px;
+    margin-bottom: 
+    
+}
+    
+    .koch {
+  
+    font-size: 10vw;
+    padding-left: 5px;
+
+}
+    
+    .hr {
+    
+    align-content: center;    
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 15px;    
+}
+    
+    .logo img {
+        
+    height: 100px;
+    width: 82px;
+    left: 1.5%;
+    top: 1.5%;
+    
+    }
+    
+    .x-files a {
+        font-size: 2.5vw;
+        margin-top: 4%;
+        margin-left: 30%;
+        margin-right: 30%;
+        display: block;
+    }
+    
+    .x-files a:hover {
+  
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 2.5vw;
+    background-color: rgb(157, 157, 157);
+    background-color: rgba(157, 157, 157, 0.6 );    
+}
+    
+    .portfolio {
+        font-size: 8vw;
+        margin-top: 110px;
+        
+    }
+    
+    .semester {
+        font-size: 8vw;
+        margin-top: 10px;
+    }
+    
+ /*   .video-container {
+        width: 100%;
+        height: 200%;
+        overflow: hidden;
+        
+    }
+    #video-bg {
+    width: 100%;
+}*/
+    
+    .video-container {
+       
+        
+        overflow: hidden;
+        
+    }
+    
+    .footer {
+        
+        font-size: 1em;
+        width: 100%;
+        bottom: 10px;
+        
+        right: 0;
+      
+        left: 0;
+        text-align: center;
+}
+}    
+   
+@media screen and (max-width: 600px) {
+    
+    .design,
+h1 {
+   
+    font-size: 16vw;
+    margin-top: 10px;
+
+}
+    
+   .sectionwrapper2 {
+
+    margin-left: 15%;
+    margin-top: 0px;
+
+}
+    
+    h3 {
+   
+  
+    font-size: 8vw;
+    margin: 0px;
+    margin-top: 4px;
+    margin-bottom: 
+    
+}
+    
+    .koch {
+  
+    font-size: 10vw;
+    padding-left: 5px;
+
+}
+    
+    .hr {
+    
+    align-content: center;    
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 15px;
+    margin-bottom: 10px;    
+}
+    
+    .logo img {
+        
+    height: 80px;
+    width: 62px;
+    left: 1.5%;
+    top: 1%;
+    
+    }
+    
+      .x-files a {
+        font-size: 1em;
+        margin-top: 100px;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    
+    .x-files a:hover {
+  
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 1em;
+    background-color: rgb(157, 157, 157);
+    background-color: rgba(157, 157, 157, 0.6 );
+    
+      
+}
+     .portfolio {
+        font-size: 12vw;
+        margin-top: 80px;
+        
+    }
+    
+    .semester {
+        font-size: 13vw;
+        
+    }
+    
+ 
+  
+
+    
+ /*   .video-container {
+        width: 100%;
+        height: 200%;
+        overflow: hidden;
+        
+    }
+    #video-bg {
+    width: 100%;
+}*/
+    
+    .video-container {
+       
+        
+        overflow: hidden;
+        
+    }
+    
+    .footer {
+        
+        font-size: 2vw;
+        width: 100%;
+        bottom: 10px;
+        
+        right: 0;
+      
+        left: 0;
+        text-align: center;
+} 
+}    
+
+@media screen and (max-width: 400px) {
+    
+    .design,
+h1 {
+   
+    font-size: 16vw;
+    margin-top: 10px;
+
+}
+    
+   .sectionwrapper2 {
+
+    margin-left: 12%;
+    margin-top: 0px;
+
+}
+    
+    h3 {
+   
+  
+    font-size: 8vw;
+    margin: 0px;
+    margin-top: 4px;
+    margin-bottom: 
+    
+}
+    
+    .koch {
+  
+    font-size: 10vw;
+    padding-left: 5px;
+
+}
+    
+    .hr {
+    
+    align-content: center;    
+    margin-top: 15px;    
+}
+    
+    .logo img {
+        
+    height: 70px;
+    width: 52px;
+    left: 1.5%;
+    top: 1%;
+    
+    }
+    
+    .x-files a {
+        font-size: 1em;
+        margin-top: 50px;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    
+    .x-files a:hover {
+  
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 1em;
+    background-color: rgb(157, 157, 157);
+    background-color: rgba(157, 157, 157, 0.6 );
+    
+}
+    
+    .portfolio {
+        font-size: 15vw;
+        margin-top: 30px;
+        
+    }
+    
+    .semester {
+        font-size: 15vw;
+        margin-top: 50px;
+    }
+    
+ /*   .video-container {
+        width: 100%;
+        height: 200%;
+        overflow: hidden;
+        
+    }
+    #video-bg {
+    width: 100%;
+}*/
+    
+    .video-container {
+       
+        
+        overflow: hidden;
+        
+    }
+    
+    .footer {
+        
+        font-size: .6em;
+        width: 100%;
+        bottom: 10px;
+        
+        right: 0;
+      
+        left: 0;
+        text-align: center;
+}
+}    
+
+
